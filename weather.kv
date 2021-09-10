@@ -1,0 +1,71 @@
+Screen:
+    BoxLayout:
+        orientation:"vertical"
+        spacing:10
+        id:home
+        MDToolbar:
+            id:bar
+            title:"Weather App"
+            elevation:10
+            right_action_items:[["cloud-search", lambda instance:app.dialog.open()]]
+
+        MDCard:
+            elevation:10
+            orientation:'vertical'
+            radius:[30,30]
+            size_hint_x:0.9
+            pos_hint:{"center_x":0.5}
+            padding:20
+            MDLabel:
+                id:weather_title
+                text:'Weather status'
+                font_style:"H5"
+                theme_text_color:"Custom"
+                text_color:app.theme_cls.primary_color
+                halign:"center"
+                size_hint_y:0.5
+
+        MDLabel:
+            id:weather_description
+            font_style:"H6"
+            theme_text_color:"Custom"
+            text_color:app.theme_cls.primary_color
+            halign:"center"
+
+        MDCard:
+            elevation:10
+            orientation:'vertical'
+            radius:[30,30]
+            size_hint_x:0.9
+            size_hint_y:1.5
+            pos_hint:{"center_x":0.5}
+
+            MDLabel:
+                id:temp
+                font_style:"H6"
+                theme_text_color:"Custom"
+                text_color:app.theme_cls.primary_color
+                halign:"center"
+
+        MDLabel:
+            id:humidity
+            font_style:"H4"
+            theme_text_color:"Custom"
+            text_color:app.theme_cls.primary_color
+            halign:"center"
+
+        MDCard:
+            elevation:10
+            orientation:'vertical'
+            radius:[30,]
+            size_hint_x:0.5
+            pos_hint:{"center_x":0.5}
+            MDLabel:
+                id:city
+                text:"City"
+                font_style:"H5"
+                theme_text_color:"Custom"
+                text_color:app.theme_cls.primary_color
+                halign:"center"
+        Widget:
+            size_hint_y:0.1
