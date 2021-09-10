@@ -1,6 +1,6 @@
 import requests
 
-api_key = "e02e9c785a4576b3193a7f007e83625e"
+api_key = "e02e9c785a4576b3193a7f007e83625e" #please create an account on the openweather website and replace your api key with this one
 
 
 def search(city_name):
